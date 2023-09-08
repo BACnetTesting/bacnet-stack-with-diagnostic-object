@@ -21,7 +21,6 @@
 *.ewt
 *.d
 *.r90
-*.r90
 *.s90
 *.d90
 *.a90
@@ -32,7 +31,6 @@
 *.patch
 *.cout
 *.lst
-*.cap
 *.csv
 *.CAP
 *.xcl
@@ -43,7 +41,6 @@
 *.asm
 *.ind
 *.7z
-*.hex
 *.elf
 *.eep
 *.emSession
@@ -114,3 +111,4 @@ apps/piface/libpifacedigital/
 /apps/create-object/bacco
 /apps/delete-object/bacdo
 
+*.vcxproj.user

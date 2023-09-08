@@ -1303,13 +1303,16 @@ typedef enum BACnetObjectType {
     OBJECT_NETWORK_PORT = 56, /* Addendum 135-2012az */
     OBJECT_ELEVATOR_GROUP = 57, /* Addendum 135-2012aq */
     OBJECT_ESCALATOR = 58, /* Addendum 135-2012aq */
-    OBJECT_LIFT = 59, /* Addendum 135-2012aq */
-    OBJECT_STAGING = 60, /* Addendum 135-2016bd */
-    OBJECT_AUDIT_LOG = 61, /* Addendum 135-2016bi */
-    OBJECT_AUDIT_REPORTER = 62, /* Addendum 135-2016bi */
-    OBJECT_COLOR = 63, /* Addendum 135-2020ca */
-    OBJECT_COLOR_TEMPERATURE = 64, /* Addendum 135-2020ca */
-    BACNET_OBJECT_TYPE_LAST = OBJECT_COLOR_TEMPERATURE,
+    OBJECT_LIFT = 59,               /* Addendum 135-2012aq */
+    OBJECT_STAGING = 60,            /* Addendum 135-2016bd */
+    OBJECT_AUDIT_LOG = 61,          /* Addendum 135-2016bi */
+    OBJECT_AUDIT_REPORTER = 62,     /* Addendum 135-2016bi */
+    OBJECT_COLOR = 63,              /* Addendum 135-2020ca */
+    OBJECT_COLOR_TEMPERATURE = 64,  /* Addendum 135-2020ca */
+    OBJECT_DIAGNOSTIC = 65,         // Huuuge warning, this is a proof of concept project and is NOT BACnet STANDARD (yet?). 
+                                    // Do not use in production. You could migrate this object to a Proprietary Object for production if you need some features sooner.
+
+    BACNET_OBJECT_TYPE_LAST = OBJECT_DIAGNOSTIC,
     BACNET_OBJECT_TYPE_RESERVED_MAX = 127,
     /* Enumerated values 0-127 are reserved for definition by ASHRAE. */
     /* Enumerated values 128-1023 may be used by others subject to  */

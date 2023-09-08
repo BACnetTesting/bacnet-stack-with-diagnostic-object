@@ -1,16 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32228.343
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bacnet-stack", "bacnet-stack.vcxproj", "{2B0DD90A-C096-401B-97D0-81D3BC4F7EB7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bacnet-stack", "bacnet-stack\bacnet-stack.vcxproj", "{2B0DD90A-C096-401B-97D0-81D3BC4F7EB7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "server", "..\bacserv\bacserv.vcxproj", "{1EBCF151-1331-44FE-8515-B0B3981EF8BC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "app-server", "bacserv\bacserv.vcxproj", "{1EBCF151-1331-44FE-8515-B0B3981EF8BC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F59490C6-9F54-4F4A-BE02-6BF9C48E79C0}"
 	ProjectSection(SolutionItems) = preProject
-		..\readme.MD = ..\readme.MD
+		readme.MD = readme.MD
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "app-server-with-diagnostics", "app-server-with-diagnostics\app-server-with-diagnostics.vcxproj", "{D765D152-306D-424B-A596-75868CF93810}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +38,14 @@ Global
 		{1EBCF151-1331-44FE-8515-B0B3981EF8BC}.Release|x64.Build.0 = Release|x64
 		{1EBCF151-1331-44FE-8515-B0B3981EF8BC}.Release|x86.ActiveCfg = Release|Win32
 		{1EBCF151-1331-44FE-8515-B0B3981EF8BC}.Release|x86.Build.0 = Release|Win32
+		{D765D152-306D-424B-A596-75868CF93810}.Debug|x64.ActiveCfg = Debug|x64
+		{D765D152-306D-424B-A596-75868CF93810}.Debug|x64.Build.0 = Debug|x64
+		{D765D152-306D-424B-A596-75868CF93810}.Debug|x86.ActiveCfg = Debug|Win32
+		{D765D152-306D-424B-A596-75868CF93810}.Debug|x86.Build.0 = Debug|Win32
+		{D765D152-306D-424B-A596-75868CF93810}.Release|x64.ActiveCfg = Release|x64
+		{D765D152-306D-424B-A596-75868CF93810}.Release|x64.Build.0 = Release|x64
+		{D765D152-306D-424B-A596-75868CF93810}.Release|x86.ActiveCfg = Release|Win32
+		{D765D152-306D-424B-A596-75868CF93810}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

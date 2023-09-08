@@ -63,6 +63,7 @@
     <ClCompile Include="..\..\..\src\bacnet\basic\object\credential_data_input.c" />
     <ClCompile Include="..\..\..\src\bacnet\basic\object\csv.c" />
     <ClCompile Include="..\..\..\src\bacnet\basic\object\device.c" />
+    <ClCompile Include="..\..\..\src\bacnet\basic\object\diagnostic.c" />
     <ClCompile Include="..\..\..\src\bacnet\basic\object\iv.c" />
     <ClCompile Include="..\..\..\src\bacnet\basic\object\lc.c" />
     <ClCompile Include="..\..\..\src\bacnet\basic\object\lo.c" />
@@ -247,6 +248,7 @@
     <ClInclude Include="..\..\..\src\bacnet\basic\object\credential_data_input.h" />
     <ClInclude Include="..\..\..\src\bacnet\basic\object\csv.h" />
     <ClInclude Include="..\..\..\src\bacnet\basic\object\device.h" />
+    <ClInclude Include="..\..\..\src\bacnet\basic\object\diagnostic.h" />
     <ClInclude Include="..\..\..\src\bacnet\basic\object\iv.h" />
     <ClInclude Include="..\..\..\src\bacnet\basic\object\lc.h" />
     <ClInclude Include="..\..\..\src\bacnet\basic\object\lo.h" />

@@ -585,6 +585,9 @@
     <ClCompile Include="..\datetime-init.c">
       <Filter>Source Files\ports\win</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\src\bacnet\basic\object\diagnostic.c">
+      <Filter>Source Files\src\bacnet\basic\object</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\src\bacnet\abort.h">
@@ -1162,6 +1165,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\src\bacnet\basic\binding\address.h">
       <Filter>Source Files\src\bacnet\basic\binding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\bacnet\basic\object\diagnostic.h">
+      <Filter>Source Files\src\bacnet\basic\object</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -79,6 +79,7 @@
 #include "bacnet/basic/object/color_object.h"
 #include "bacnet/basic/object/color_temperature.h"
 #endif
+#include "bacnet/basic/object/diagnostic.h"
 
 /* local forward (semi-private) and external prototypes */
 int Device_Read_Property_Local(BACNET_READ_PROPERTY_DATA *rpdata);
@@ -327,6 +328,18 @@ static object_functions_t My_Object_Table[] = {
         NULL /* COV */, NULL /* COV Clear */, NULL /* Intrinsic Reporting */,
         NULL /* Add_List_Element */, NULL /* Remove_List_Element */,
         NULL /* Create */, NULL /* Delete */ },
+
+    { OBJECT_MULTI_STATE_OUTPUT, Diagnostic_Init,
+        Diagnostic_Count, Diagnostic_Index_To_Instance,
+        Diagnostic_Valid_Instance, Diagnostic_Object_Name,
+        Diagnostic_Read_Property, Diagnostic_Write_Property,
+        Diagnostic_Property_Lists, NULL /* ReadRangeInfo */,
+        NULL    /* Iterator */, NULL /* Value_Lists */, NULL /* COV */,
+        NULL    /* COV Clear */, NULL /* Intrinsic Reporting */,
+        NULL    /* Add_List_Element */, NULL /* Remove_List_Element */, 
+        NULL,   /* Create */
+        NULL    /* Delete */ },
+
     { MAX_BACNET_OBJECT_TYPE, NULL /* Init */, NULL /* Count */,
         NULL /* Index_To_Instance */, NULL /* Valid_Instance */,
         NULL /* Object_Name */, NULL /* Read_Property */,
@@ -2081,7 +2094,7 @@ bool Device_Value_List_Supported(BACNET_OBJECT_TYPE object_type)
 void Device_Init(object_functions_t *object_table)
 {
     struct object_functions *pObject = NULL;
-    characterstring_init_ansi(&My_Object_Name, "SimpleServer");
+    characterstring_init_ansi(&My_Object_Name, "'server-with-diagnostics' demo application");
     datetime_init();
     if (object_table) {
         Object_Table = object_table;

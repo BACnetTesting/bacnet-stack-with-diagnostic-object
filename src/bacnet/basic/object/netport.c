@@ -947,10 +947,10 @@ bool Network_Port_IP_Subnet(
             prefix = Object_List[index].Network.IPv4.IP_Subnet_Prefix;
             if ((prefix > 0) && (prefix <= 32)) {
                 mask = (0xFFFFFFFF << (32 - prefix)) & 0xFFFFFFFF;
-                encode_unsigned32(ip_mask, mask);
-                status =
-                    octetstring_init(subnet_mask, ip_mask, sizeof(ip_mask));
             }
+            // 2023-09-24 BTS revealed a flaw. We need to encode _something_
+            encode_unsigned32(ip_mask, mask);
+            status = octetstring_init(subnet_mask, ip_mask, sizeof(ip_mask));
         }
     }
 
@@ -2539,6 +2539,21 @@ bool Network_Port_Write_Property(BACNET_WRITE_PROPERTY_DATA *wp_data)
         case PROP_LINK_SPEED:
         case PROP_CHANGES_PENDING:
         case PROP_APDU_LENGTH:
+
+            // 2023-09-24 Missing cases detected by BTS
+#if defined(BACDL_BIP) && BBMD_ENABLED
+        case PROP_FD_SUBSCRIPTION_LIFETIME:
+        case PROP_BBMD_FOREIGN_DEVICE_TABLE:
+        case PROP_BBMD_ACCEPT_FD_REGISTRATIONS:
+        case PROP_BBMD_BROADCAST_DISTRIBUTION_TABLE:
+        case PROP_IP_DNS_SERVER:
+        case PROP_IP_DEFAULT_GATEWAY:
+        case PROP_BACNET_IP_UDP_PORT:
+        case PROP_IP_ADDRESS:
+        case PROP_BACNET_IP_MODE:
+        case PROP_IP_SUBNET_MASK:
+#endif
+
             wp_data->error_class = ERROR_CLASS_PROPERTY;
             wp_data->error_code = ERROR_CODE_WRITE_ACCESS_DENIED;
             break;
